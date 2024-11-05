@@ -1,0 +1,773 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Style général du header */
+header {
+  background-color: #2c3e50; /* Couleur de fond sombre */
+  padding: 10px 0; /* Espacement interne réduit */
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  justify-content: space-between; /* Sépare le menu et le bouton connexion */
+  align-items: center; /* Centre les éléments verticalement */
+  color: #ffffff; /* Couleur du texte */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre en bas du header */
+  position: relative; /* Position normale, pas de fixation */
+  width: 100%; /* Assure que le header prend toute la largeur */
+  z-index: 1000; /* Met le header au-dessus du contenu si nécessaire */
+}
+
+/* Retrait de l'espacement pour compenser le sticky header */
+body {
+  padding-top: 0; /* Plus besoin d'ajuster le padding en haut du body */
+}
+
+/* Style pour la description du site */
+header h2 {
+  font-size: 1.6em; /* Taille du texte réduite */
+  margin: 0;
+  font-weight: 300; /* Rend le texte plus fin */
+  color: #ecf0f1; /* Couleur plus claire pour la description */
+}
+
+/* Style du menu */
+.main-navigation .menu {
+  list-style: none; /* Supprime les puces */
+  padding: 0; /* Supprime les marges internes */
+  margin-left: 40px; /* Supprime les marges */
+  display: flex; /* Affiche les éléments en ligne */
+  justify-content: center; /* Centre le menu horizontalement */
+  align-items: center; /* Aligne verticalement les éléments */
+}
+
+/* Style des éléments de menu */
+.main-navigation .menu li {
+  margin: 0 30px; /* Ajuste l'espacement entre les items du menu */
+}
+
+/* Style des liens de menu */
+.main-navigation .menu li a {
+  color: #ffffff; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement par défaut */
+  font-size: 1.2em; /* Ajuste la taille du texte */
+  font-weight: 500; /* Rend les liens légèrement plus gras */
+  transition: color 0.3s ease; /* Transition pour effet au survol */
+}
+
+/* Effet au survol des liens */
+.main-navigation .menu li a:hover {
+  color: #1abc9c; /* Couleur des liens au survol */
+}
+
+/* Style du bouton connexion */
+.login-logout-btn {
+  margin-left: auto; /* Pousse le bouton vers la droite */
+  display: flex;
+  margin-right: 40px;
+  align-items: center; /* Aligne verticalement avec le menu */
+}
+
+.login-button, 
+.logout-button {
+  display: inline-block;
+  padding: 10px 20px; /* Ajuste la taille du bouton */
+  background-color: #0073aa; /* Couleur principale */
+  color: #fff;
+  text-decoration: none; /* Enlève le soulignement du lien */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.login-button:hover, 
+.logout-button:hover {
+  background-color: #005177; /* Couleur plus sombre au survol */
+}
+
+/* Style responsive pour le header */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Passe les éléments en colonne en mode mobile */
+    align-items: center; /* Centre les éléments */
+    padding: 10px 0;
+  }
+
+  .main-navigation .menu {
+    flex-direction: column; /* Affiche les éléments du menu en colonne */
+  }
+
+  .main-navigation .menu li {
+    margin: 10px 0; /* Ajoute de l'espace verticalement entre les items */
+  }
+
+  .login-logout-btn {
+    margin-right: 0; /* Centre le bouton en mode mobile */
+    margin-top: 10px; /* Ajoute un espacement au-dessus du bouton en mobile */
+  }
+}
+
+
+
+
+/* Conteneur principal */
+.home-container {
+max-width: 800px; /* Largeur maximale */
+margin: 50px auto; /* Centre la page */
+padding: 20px; /* Espacement interne */
+background-color: #ffffff; /* Couleur de fond du conteneur */
+border-radius: 10px; /* Bords arrondis */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
+}
+
+/* Titre principal */
+.home-title {
+font-size: 2.5em; /* Taille du texte */
+color: #2c3e50; /* Couleur du texte */
+text-align: center; /* Centre le texte */
+margin-bottom: 10px; /* Espacement en bas */
+}
+
+/* Description */
+.home-description {
+font-size: 1.2em; /* Taille du texte */
+color: #7f8c8d; /* Couleur du texte */
+text-align: center; /* Centre le texte */
+margin-bottom: 20px; /* Espacement en bas */
+}
+
+/* Liste des projets */
+.project-list {
+margin: 20px 0; /* Espacement autour de la liste */
+padding: 0; /* Pas de padding */
+list-style: none; /* Supprime les puces par défaut */
+}
+
+/* Éléments de la liste */
+.project-item {
+background-color: #ecf0f1; /* Couleur de fond des items */
+padding: 10px 15px; /* Espacement interne */
+border-radius: 5px; /* Bords arrondis */
+margin: 10px 0; /* Espacement entre les items */
+transition: background-color 0.3s; /* Transition pour effet hover */
+}
+
+/* Footer global */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 15px 10px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer menu */
+.footer-menu-section {
+  margin: 10px 0;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.footer-menu li a {
+  color: #ffffff;
+}
+
+.footer-menu li a:hover {
+  color: #1abc9c;
+}
+
+/* Newsletter section */
+.newsletter-section {
+  margin-top: 40px;
+}
+
+.newsletter-section p {
+  margin-bottom: 10px;
+}
+
+.newsletter-section form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  width: 250px;
+}
+
+.newsletter-section button {
+  padding: 10px 15px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.newsletter-section button:hover {
+  background-color: #16a085;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 15px;
+}
+
+.footer-left {
+  text-align: left;
+  margin-left: 50px;
+}
+
+.footer-right {
+  text-align: right;
+  margin-right: 50px;
+}
+
+/* Mentions légales et WordPress links */
+.footer-bottom a {
+  color: #1abc9c;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+/* Conteneur principal pour les cartes */
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive */
+  justify-items: center; /* Centre les cartes dans la grille */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+/* Conteneur de chaque projet */
+.projet {
+  display: flex;
+  flex-direction: column; /* Empile l'image, le titre et le contenu verticalement */
+  justify-content: space-between; /* Équilibre les éléments */
+  width: 100%;
+  margin-bottom: 40px;
+  max-width: 320px; /* Fixe une largeur maximale uniforme pour les cartes */
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Cache les débordements */
+  transition: transform 0.3s ease; /* Transition fluide pour box-shadow et transform */
+  min-height: 500px; /* Fixe une hauteur minimale pour que toutes les cartes aient la même longueur */
+}
+
+/* Effet hover pour le projet */
+.projet:hover {
+  transform: translateY(-10px); /* Légère élévation au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmente légèrement l'ombre au survol */
+}
+
+/* Image du projet */
+.projet-thumbnail img {
+  width: 100%; /* Prend toute la largeur de la carte */
+  height: 200px; /* Hauteur fixe pour uniformiser les images */
+  object-fit: cover; /* Maintient le ratio de l'image sans distorsion */
+}
+
+/* Titre du projet */
+.projet-title {
+  font-size: 1.6em; /* Taille de la police pour le titre */
+  color: #333333; /* Couleur spécifique pour le titre */
+  text-align: center; /* Centre le titre */
+  margin-top: 10px; /* Réduit l'espacement entre l'image et le titre */
+  margin-bottom: 10px; /* Réduit l'espacement sous le titre */
+}
+
+/* Style pour les termes (type et couleur) */
+.projet-title span {
+  font-size: 0.9em; /* Taille plus petite pour les métadonnées */
+  color: #555555; /* Couleur plus discrète pour les termes */
+  display: block; /* Affiche les termes sur une nouvelle ligne */
+}
+
+/* Contenu du projet */
+.projet-content {
+  flex-grow: 1; /* Prend tout l'espace restant dans la carte */
+  padding: 15px; /* Espacement interne pour le contenu */
+  font-size: 1em; /* Taille de la police pour le contenu */
+  color: #555555; /* Couleur pour le texte */
+  line-height: 1.6; /* Améliore l'espacement entre les lignes */
+  overflow: hidden; /* Évite les débordements de texte */
+}
+
+/* Styles pour rendre la page responsive */
+@media (max-width: 768px) {
+  .projet {
+      max-width: 100%; /* Les cartes prennent toute la largeur sur mobile */
+  }
+
+  .projet-title {
+      font-size: 1.4em; /* Taille de police pour le titre sur mobile */
+  }
+
+  .projet-content {
+      font-size: 1em; /* Taille de police pour le contenu sur mobile */
+  }
+}
+
+
+
+
+
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container p {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0073aa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container input[type="submit"]:hover {
+  background-color: #005177;
+}
+
+/**/
+.login-logout-btn {
+  align-items: left;
+  margin-top: 15px; /* Ajuste l'espacement en fonction de la mise en page */
+}
+
+.login-button, 
+.logout-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #0073aa; /* Couleur principale */
+  color: #fff;
+  text-decoration: none; /* Enlève le soulignement du lien */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.login-button:hover, 
+.logout-button:hover {
+  background-color: #005177; /* Couleur plus sombre au survol */
+}
+
+
+
+
+
+
+/* Conteneur principal de l'article */
+.single-project-card {
+  max-width: 800px; /* Limite la largeur de la carte */
+  margin: 20px auto; /* Centre la carte avec un espacement */
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Cache les débordements */
+  transition: box-shadow 0.3s ease; /* Transition pour l'effet hover */
+
+}
+
+/* Effet hover pour l'article */
+.single-project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Image de la carte */
+.single-project-card img {
+  width: 100%; /* Prend toute la largeur de la carte */
+  height: auto; /* Hauteur automatique pour respecter le ratio */
+  max-height: 400px; /* Hauteur maximale pour l'image */
+  object-fit: cover; /* Garde le ratio d'origine de l'image */
+}
+
+/* Titre de l'article */
+.single-project-title {
+  font-size: 2em; /* Taille de la police pour le titre */
+  color: #333333; /* Couleur sombre pour le titre */
+  margin: 20px; /* Marge autour du titre */
+  text-align: center; /* Centre le titre */
+}
+
+/* Contenu de l'article */
+.single-project-description {
+  padding: 20px; /* Espacement interne pour le contenu */
+  font-size: 1.1em; /* Taille de la police pour le contenu */
+  color: #555555; /* Couleur pour le texte */
+  line-height: 1.6; /* Améliore l'espacement entre les lignes */
+}
+
+/* Lien de retour */
+.return-to-projects-link {
+  display: inline-block; /* Affichage en bloc pour la mise en forme */
+  padding: 10px 20px; /* Espacement interne */
+  background-color: #0073aa; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none; /* Supprime le soulignement */
+  text-align: center; /* Centre le texte */
+  transition: background-color 0.3s ease; /* Transition pour le survol */
+  justify-content: center;
+}
+
+/* Effet hover pour le lien de retour */
+.return-to-projects-link:hover {
+  background-color: #005177; /* Couleur au survol */
+}
+
+/* Styles pour rendre la page responsive */
+@media (max-width: 768px) {
+  .single-project-title {
+      font-size: 1.6em; /* Taille de police pour le titre sur mobile */
+  }
+
+  .single-project-description {
+      font-size: 1em; /* Taille de police pour le contenu sur mobile */
+  }
+
+  .return-to-projects-link {
+      padding: 8px 15px; /* Ajuste l'espacement interne pour les mobiles */
+  }
+}
+
+
+
+
+
+
+
+
+/* Conteneur des équipes */
+.equipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  flex-wrap: wrap;
+  justify-items: center; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+/* Style des cards individuelles */
+.equipe {
+  background-color: #ffffff; /* Fond blanc */
+  border-radius: 10px; /* Coins arrondis */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour la profondeur */
+  padding: 20px; /* Espacement interne */
+  margin-bottom: 40px;
+  width: 280px; /* Largeur fixe pour chaque card */
+  text-align: center; /* Centre le contenu dans chaque card */
+  transition: transform 0.3s ease; /* Transition pour l'effet hover */
+}
+
+/* Effet hover sur les cards */
+.equipe:hover {
+  transform: translateY(-10px); /* Légère élévation au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+
+/* Style des noms des étudiants */
+.equipe .etudiant ul li {
+  font-size: 1em; /* Taille de la police pour les prénoms */
+  color: #34495e; /* Couleur des prénoms */
+  padding: 5px 0; /* Espacement interne des items */
+}
+
+/* Contenu de l'article */
+.etudiant {
+  padding: 20px; /* Espacement interne pour le contenu */
+  font-size: 1.1em; /* Taille de la police pour le contenu */
+  color: #555555; /* Couleur pour le texte */
+  line-height: 1.6; /* Améliore l'espacement entre les lignes */
+}
+
+/* Styles pour les listes d'étudiants et de projets */
+.etudiant ul {
+  list-style-type: none; /* Supprime les puces des listes */
+  padding: 0; /* Supprime le padding par défaut */
+}
+
+.etudiant li {
+  margin: 8px 0; /* Réduit l'espacement autour des éléments de la liste */
+  background-color: #e9ecef; /* Couleur de fond douce pour les items */
+  padding: 10px; /* Espacement interne des items */
+  border-radius: 5px; /* Coins arrondis pour les items */
+}
+
+/* Styles pour rendre la page responsive */
+@media (max-width: 768px) {
+  .title {
+      font-size: 1.6em; /* Taille de police pour le titre sur mobile */
+  }
+
+  .etudiant {
+      font-size: 1em; /* Taille de police pour le contenu sur mobile */
+  }
+}
+
+.title {
+  color: black;
+}
+
+
+
+
+
+
+/* Conteneur principal */
+.content-container {
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.article-entry {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+/* Conteneur de la grille des projets */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
+  gap: 35px; /* Réduction de l'espace entre les cartes */
+  margin: 20px 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Style de chaque carte de projet */
+.single-project-card {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet hover fluide */
+  overflow: hidden; /* Cache le débordement */
+  text-align: center;
+}
+
+/* Style pour les images des projets */
+.project-thumbnail img {
+  width: 100%; /* Largeur égale pour toutes les images */
+  height: 250px; /* Hauteur fixe pour toutes les images */
+  border-radius: 10px 10px 0 0; /* Coins arrondis pour l'image en haut */
+}
+
+/* Style du titre des projets */
+.project-title {
+  font-size: 1.5em;
+  color: #333;
+  margin: 10px 0; /* Réduction de la marge */
+}
+
+/* Effet hover sur chaque carte de projet */
+.single-project-card:hover {
+  transform: translateY(-10px); /* Légère remontée au hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au hover */
+}
+
+/* Style pour la liste des équipes associées */
+.associated-team-list {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Pour que les boutons s'adaptent bien en cas de trop de contenu */
+}
+
+/* Style des boutons pour les équipes associées */
+.associated-team-card a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073aa; /* Couleur de fond du bouton */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis pour le bouton */
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease; /* Transition pour l'effet hover */
+}
+
+.associated-team-card a:hover {
+  background-color: #005177; /* Couleur plus sombre au hover */
+}
+
+
+/* Responsive : pour les écrans plus petits */
+@media (max-width: 1200px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur écran moyen */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur écran petit */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur mobile */
+  }
+}
+
+
+
+
+
+
+
+/* Conteneur principal de l'article */
+.team-card {
+  max-width: 800px; /* Limite la largeur de la carte */
+  margin: 20px auto; /* Centre la carte avec un espacement */
+  background-color: #ffffff; /* Fond blanc pour la carte */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  overflow: hidden; /* Cache les débordements */
+  transition: box-shadow 0.3s ease; /* Transition pour l'effet hover */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Effet hover pour l'article */
+.team-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Image de la carte */
+.team-card img {
+  width: 100%; /* Prend toute la largeur de la carte */
+  height: auto; /* Hauteur automatique pour respecter le ratio */
+  max-height: 400px; /* Hauteur maximale pour l'image */
+  object-fit: cover; /* Garde le ratio d'origine de l'image */
+}
+
+/* Titre de l'article */
+.team-card-title {
+  font-size: 2em; /* Taille de la police pour le titre */
+  color: #333333; /* Couleur sombre pour le titre */
+  margin: 20px; /* Marge autour du titre */
+  text-align: center; /* Centre le titre */
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+/* Liste des étudiants */
+.student-list ul {
+  list-style-type: none; /* Supprime les puces des listes */
+  padding: 0; /* Supprime le padding par défaut */
+  margin: 0 20px; /* Espacement autour de la liste */
+  margin-bottom: 50px;
+}
+
+/* Style des noms des étudiants */
+.student-list ul li {
+  font-size: 1.1em; /* Taille de la police */
+  color: #555555; /* Couleur pour le texte */
+  padding: 10px 0; /* Espacement interne des items */
+  border-bottom: 1px solid #e9e9e9; /* Ligne séparatrice entre les étudiants */
+}
+
+/* Titre des projets associés */
+.student-list h2 {
+  font-size: 1.5em; /* Taille de la police pour les projets associés */
+  color: #0073aa; /* Couleur du titre des projets */
+  margin: 20px 20px 10px; /* Espacement autour du titre */
+  text-align: left; /* Aligne à gauche */
+}
+
+/* Liste des projets associés */
+.student-list ul li a {
+  color: #0073aa; /* Couleur des liens */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  transition: color 0.3s ease; /* Transition pour l'effet hover */
+}
+
+.student-list ul li a:hover {
+  color: #005177; /* Couleur plus sombre au survol */
+}
+
+/* Styles pour rendre la page responsive */
+@media (max-width: 768px) {
+  .team-card-title {
+    font-size: 1.6em; /* Taille de police pour le titre sur mobile */
+  }
+
+  .student-list ul li {
+    font-size: 1em; /* Taille de police pour le contenu sur mobile */
+  }
+}
