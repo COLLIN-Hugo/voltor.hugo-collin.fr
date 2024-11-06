@@ -1,0 +1,68 @@
+Log created: 2024-11-06 17:21:39
+Type: backup
+[2024-11-06 17:21:39][notice]Start backing up.
+[2024-11-06 17:21:39][notice]server info fcgi:Off max execution time: 300 wp version:6.6.2 php version:8.2.4 db version:10.4.28 php ini:safe_mode: memory_limit:256M memory_get_usage:56,00 Mo memory_get_peak_usage:56,73 Mo extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2024-11-06 17:21:39][notice]Prepare to backup backup_db files.
+[2024-11-06 17:21:39][notice]Start exporting database.
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_cky_cookies
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_actionscheduler_claims
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_actionscheduler_groups
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_cky_cookie_categories
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_links
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_term_relationships
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_actionscheduler_logs
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_cky_banners
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_commentmeta
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_imagify_folders
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_term_taxonomy
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_termmeta
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_terms
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_usermeta
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_users
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_comments
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_imagify_files
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_actionscheduler_actions
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_posts
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_postmeta
+[2024-11-06 17:21:39][notice]Preparing to dump table wp_options
+[2024-11-06 17:21:39][notice]Exporting database finished.
+[2024-11-06 17:21:39][notice]Start compressing database
+[2024-11-06 17:21:39][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_db.sql
+[2024-11-06 17:21:39][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_db.part001.zip, filesize: 190,19 Ko
+[2024-11-06 17:21:39][notice]Compressing database completed
+[2024-11-06 17:21:39][notice]Backing up backup_db completed.
+[2024-11-06 17:21:39][notice]Prepare to backup backup_themes files.
+[2024-11-06 17:21:39][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_themes.part001.zip index:341
+[2024-11-06 17:21:40][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_themes.part001.zip success. index:341 file size:14,06 Mo
+[2024-11-06 17:21:41][notice]Backing up backup_themes completed.
+[2024-11-06 17:21:41][notice]Prepare to backup backup_plugin files.
+[2024-11-06 17:21:41][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_plugin.part001.zip index:1741
+[2024-11-06 17:21:44][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_plugin.part001.zip success. index:1741 file size:10,35 Mo
+[2024-11-06 17:21:45][notice]Backing up backup_plugin completed.
+[2024-11-06 17:21:45][notice]Prepare to backup backup_uploads files.
+[2024-11-06 17:21:45][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_uploads.part001.zip index:137
+[2024-11-06 17:21:46][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_uploads.part001.zip success. index:137 file size:25,75 Mo
+[2024-11-06 17:21:46][notice]Backing up backup_uploads completed.
+[2024-11-06 17:21:46][notice]Prepare to backup backup_content files.
+[2024-11-06 17:21:46][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_content.part001.zip index:104
+[2024-11-06 17:21:47][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_content.part001.zip success. index:104 file size:1,43 Mo
+[2024-11-06 17:21:47][notice]Backing up backup_content completed.
+[2024-11-06 17:21:47][notice]Prepare to backup backup_core files.
+[2024-11-06 17:21:47][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_core.part001.zip index:2680
+[2024-11-06 17:21:52][notice]Compressing zip file:localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_core.part001.zip success. index:2680 file size:13,99 Mo
+[2024-11-06 17:21:53][notice]Backing up backup_core completed.
+[2024-11-06 17:21:53][notice]Prepare to backup backup_merge files.
+[2024-11-06 17:21:53][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_db.zip
+[2024-11-06 17:21:53][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 190,12 Ko
+[2024-11-06 17:21:53][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_themes.zip
+[2024-11-06 17:21:54][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 14,19 Mo
+[2024-11-06 17:21:54][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_plugin.zip
+[2024-11-06 17:21:54][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 24,23 Mo
+[2024-11-06 17:21:54][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_uploads.zip
+[2024-11-06 17:21:56][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 49,98 Mo
+[2024-11-06 17:21:56][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_content.zip
+[2024-11-06 17:21:56][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 51,40 Mo
+[2024-11-06 17:21:56][notice]Prepare to zip file. file: localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_core.zip
+[2024-11-06 17:21:57][notice]Adding zip files completed.localhost_voltor.hugo-collin.fr_wpvivid-8da508a882c37_2024-11-06-17-21_backup_all.part001.zip, filesize: 65,01 Mo
+[2024-11-06 17:21:57][notice]Backing up backup_merge completed.
+[2024-11-06 17:21:57][notice]Backup completed.

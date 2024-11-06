@@ -624,14 +624,14 @@ footer {
   margin: 0 auto;
   padding: 20px;
   text-align: center;
-  color: #fff;
+  color: #fdfdfd;
 }
 /* Titre principal */
 .article-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 60px;
   text-transform: uppercase;
-  color: #FDFDFD;
+  color: #fdfdfd;
   margin-bottom: 60px;
   text-align: left;
   margin-top: 100px;
@@ -641,7 +641,7 @@ footer {
 .login-container h2, .register-container h2 {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 48px;
-  color: #fff;
+  color: #fdfdfd;
   margin-bottom: 20px;
 }
 
@@ -665,7 +665,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   border-radius: 6px;
   border: 1px solid #444;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #fdfdfd;
   box-sizing: border-box;
   font-size: 18px;
 }
@@ -677,7 +677,7 @@ input[type="checkbox"] {
 
 .terms {
   font-size: 16px;
-  color: #ccc;
+  color: #fdfdfd;
   text-align: left;
   display: flex;
   align-items: center;
@@ -694,7 +694,7 @@ input[type="checkbox"] {
 
 .login-link, .register-link {
   font-size: 16px;
-  color: #ccc;
+  color: #fdfdfd;
   margin-top: 70px;
   margin-bottom: -10px;
 
@@ -702,7 +702,7 @@ input[type="checkbox"] {
 }
 
 .login-link a, .register-link a {
-  color: #007bff;
+  color: #2086FF;
   text-decoration: none;
 }
 
@@ -713,8 +713,8 @@ input[type="checkbox"] {
 .login-submit, .register-submit {
   width: 100%;
   padding: 14px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #2086FF;
+  color: #fdfdfd;
   border: none;
   border-radius: 6px;
   font-size: 24px;
@@ -756,7 +756,7 @@ input[type="checkbox"] {
   background-color: #333;
   border-radius: 10px;
   overflow: hidden;
-  color: #fff;
+  color: #fdfdfd;
   max-width: 800px;
   margin: 20px auto;
   min-height: 300px;
@@ -770,7 +770,7 @@ input[type="checkbox"] {
   justify-content: space-between;
   align-items: center;
   padding: 14px 300px; /* Réduire la hauteur de la bande */
-  background-color: #007bff;
+  background-color: #2086FF;
   color: #fff;
   font-weight: bold;
   font-size: 30px;
@@ -819,7 +819,7 @@ input[type="checkbox"] {
 .vs-text {
   font-size: 100px;
   font-weight: bold;
-  color: #007bff;
+  color: #2086FF;
   margin: 0 20px;
 }
 
@@ -868,13 +868,11 @@ input[type="checkbox"] {
 
 
 /*INFO LéGALES*/
-/* Style pour la page Informations Légales */
 .legal-container {
-  max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  color: #ffffff; /* Texte en blanc */
-  font-family: Arial, sans-serif;
+  color: #fdfdfd; 
 }
 
 /* Titre principal de la page */
@@ -883,7 +881,7 @@ input[type="checkbox"] {
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 /* Titres des sections */
@@ -899,7 +897,7 @@ input[type="checkbox"] {
   font-size: 28px;
   font-weight: bold;
   margin-top: 20px;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 /* Paragraphe de texte */
@@ -907,7 +905,7 @@ input[type="checkbox"] {
   font-size: 18px;
   line-height: 1.6;
   margin: 15px 0;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 /* Liste */
@@ -915,12 +913,12 @@ input[type="checkbox"] {
   list-style-type: disc;
   padding-left: 40px;
   font-size: 18px;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 /* Style pour les liens */
 .legal-section a {
-  color: #007bff; /* Couleur bleue pour les liens */
+  color: #2086FF; 
   text-decoration: none;
 }
 
@@ -941,8 +939,7 @@ input[type="checkbox"] {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  color: #fdfdfd;
   border-radius: 8px;
 }
 
@@ -1010,10 +1007,184 @@ input[type="checkbox"] {
 .team-details {
   font-size: 18px;
   line-height: 1.6;
-  color: #ddd;
+  color: #fdfdfd;
 }
 
 
+
+
+
+
+
+
+
+/* PAGE DU MATCH */
+/* Style général de la carte de compétition */
+.card-competition {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fdfdfd;
+  border-radius: 8px;
+}
+
+/* Titre de la compétition */
+.title-competition {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  color: #fdfdfd;
+  margin-bottom: 10px;
+  margin-top: 80px;
+}
+
+/* Séparation entre les sections */
+.separator-competition {
+  border: none;
+  border-top: 2px solid #888;
+  margin: 20px 0;
+}
+
+/* Image de la compétition */
+.image-competition img {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+/* Titre de la section (Description) */
+.section-title-competition {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #fdfdfd;
+}
+
+/* Description de la compétition */
+.description-competition {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fdfdfd;
+}
+
+/* Lien de retour à la liste des projets */
+.link-return-competition {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #2086FF;
+  color: #fdfdfd;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.link-return-competition:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Profil Utilisateur */
+.profile-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fdfdfd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Avatar */
+.profile-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  border: 4px solid #2086FF;
+}
+
+/* Nom et rang */
+.profile-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #FFFFFF;
+}
+
+.profile-rank {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+/* Section titre */
+.section-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+  margin: 30px 0 10px;
+  color: #fdfdfd;
+}
+
+.section-separator {
+  border: none;
+  border-top: 2px solid #888;
+  margin: 10px 0 20px;
+}
+
+/* Équipe */
+.profile-team {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #fdfdfd;
+  margin-bottom: 20px;
+}
+
+/* Statistiques */
+.profile-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.stats-item {
+  background-color: #444;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: left;
+  color: #fdfdfd;
+}
+
+.stats-item span {
+  font-weight: bold;
+  color: #2086FF;
+}
+
+.stats-item p {
+  margin: 5px 0 0;
+  color: #ddd;
+}
+
+/* Animation et effet de survol */
+.profile-avatar img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.profile-stats .stats-item:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease;
+}
 
 
 
