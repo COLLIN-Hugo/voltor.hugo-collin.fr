@@ -1,198 +1,328 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #232323;
   text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'open sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
-/* Style général du header */
-header {
-  background-color: #2c3e50; /* Couleur de fond sombre */
-  padding: 10px 0; /* Espacement interne réduit */
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  justify-content: space-between; /* Sépare le menu et le bouton connexion */
-  align-items: center; /* Centre les éléments verticalement */
-  color: #ffffff; /* Couleur du texte */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre en bas du header */
-  position: relative; /* Position normale, pas de fixation */
-  width: 100%; /* Assure que le header prend toute la largeur */
-  z-index: 1000; /* Met le header au-dessus du contenu si nécessaire */
-}
 
-/* Retrait de l'espacement pour compenser le sticky header */
-body {
-  padding-top: 0; /* Plus besoin d'ajuster le padding en haut du body */
-}
 
-/* Style pour la description du site */
-header h2 {
-  font-size: 1.6em; /* Taille du texte réduite */
-  margin: 0;
-  font-weight: 300; /* Rend le texte plus fin */
-  color: #ecf0f1; /* Couleur plus claire pour la description */
-}
 
-/* Style du menu */
-.main-navigation .menu {
-  list-style: none; /* Supprime les puces */
-  padding: 0; /* Supprime les marges internes */
-  margin-left: 40px; /* Supprime les marges */
-  display: flex; /* Affiche les éléments en ligne */
-  justify-content: center; /* Centre le menu horizontalement */
-  align-items: center; /* Aligne verticalement les éléments */
-}
 
-/* Style des éléments de menu */
-.main-navigation .menu li {
-  margin: 0 30px; /* Ajuste l'espacement entre les items du menu */
-}
 
-/* Style des liens de menu */
-.main-navigation .menu li a {
-  color: #ffffff; /* Couleur des liens */
-  text-decoration: none; /* Supprime le soulignement par défaut */
-  font-size: 1.2em; /* Ajuste la taille du texte */
-  font-weight: 500; /* Rend les liens légèrement plus gras */
-  transition: color 0.3s ease; /* Transition pour effet au survol */
-}
-
-/* Effet au survol des liens */
-.main-navigation .menu li a:hover {
-  color: #1abc9c; /* Couleur des liens au survol */
-}
-
-/* Style du bouton connexion */
-.login-logout-btn {
-  margin-left: auto; /* Pousse le bouton vers la droite */
+/*HEADER*/
+.header {
+  background-color: #383838;
   display: flex;
-  margin-right: 40px;
-  align-items: center; /* Aligne verticalement avec le menu */
-}
-
-.login-button, 
-.logout-button {
-  display: inline-block;
-  padding: 10px 20px; /* Ajuste la taille du bouton */
-  background-color: #0073aa; /* Couleur principale */
-  color: #fff;
-  text-decoration: none; /* Enlève le soulignement du lien */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-}
-
-.login-button:hover, 
-.logout-button:hover {
-  background-color: #005177; /* Couleur plus sombre au survol */
-}
-
-/* Style responsive pour le header */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column; /* Passe les éléments en colonne en mode mobile */
-    align-items: center; /* Centre les éléments */
-    padding: 10px 0;
-  }
-
-  .main-navigation .menu {
-    flex-direction: column; /* Affiche les éléments du menu en colonne */
-  }
-
-  .main-navigation .menu li {
-    margin: 10px 0; /* Ajoute de l'espace verticalement entre les items */
-  }
-
-  .login-logout-btn {
-    margin-right: 0; /* Centre le bouton en mode mobile */
-    margin-top: 10px; /* Ajoute un espacement au-dessus du bouton en mobile */
-  }
-}
-
-
-
-
-/* Conteneur principal */
-.home-container {
-max-width: 800px; /* Largeur maximale */
-margin: 50px auto; /* Centre la page */
-padding: 20px; /* Espacement interne */
-background-color: #ffffff; /* Couleur de fond du conteneur */
-border-radius: 10px; /* Bords arrondis */
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre pour profondeur */
-}
-
-/* Titre principal */
-.home-title {
-font-size: 2.5em; /* Taille du texte */
-color: #2c3e50; /* Couleur du texte */
-text-align: center; /* Centre le texte */
-margin-bottom: 10px; /* Espacement en bas */
-}
-
-/* Description */
-.home-description {
-font-size: 1.2em; /* Taille du texte */
-color: #7f8c8d; /* Couleur du texte */
-text-align: center; /* Centre le texte */
-margin-bottom: 20px; /* Espacement en bas */
-}
-
-/* Liste des projets */
-.project-list {
-margin: 20px 0; /* Espacement autour de la liste */
-padding: 0; /* Pas de padding */
-list-style: none; /* Supprime les puces par défaut */
-}
-
-/* Éléments de la liste */
-.project-item {
-background-color: #ecf0f1; /* Couleur de fond des items */
-padding: 10px 15px; /* Espacement interne */
-border-radius: 5px; /* Bords arrondis */
-margin: 10px 0; /* Espacement entre les items */
-transition: background-color 0.3s; /* Transition pour effet hover */
-}
-
-/* Footer global */
-footer {
-  background-color: #2c3e50;
-  color: #ffffff;
-  padding: 15px 10px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 110px;
   position: relative;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer menu */
-.footer-menu-section {
-  margin: 10px 0;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Positionne le logo à gauche avec une marge de 80px */
+.logo {
+  position: absolute;
+  left: 80px;
 }
 
-.footer-menu {
+.logo img {
+  height: 80px;
+}
+
+/* Positionne le menu burger à droite avec une marge de 80px et augmente sa taille */
+.burger-menu {
+  position: absolute;
+  right: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px; /* Taille augmentée */
+  cursor: pointer;
+}
+
+.burger-menu span {
+  display: block;
+  width: 40px; /* Largeur augmentée */
+  height: 20px; /* Hauteur augmentée */
+  background-color: #FDFDFD;
+  margin: 4px 0;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #232323;
+  color: #FDFDFD;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Affichage du menu actif */
+.mobile-menu.active {
+  transform: translateY(0);
+}
+
+/* En-tête du menu avec le logo et le bouton de fermeture */
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.menu-header .menu-logo {
+  margin-top: 30px;
+  margin-left: 50px; 
+}
+
+.menu-header .menu-logo img {
+  height: 80px;
+}
+
+.close-menu {
+  font-size: 80px;
+  cursor: pointer;
+  color: #FDFDFD;
+  margin-right: 80px; 
+}
+
+.menu-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 }
 
-.footer-menu li {
+.menu-list li {
+  margin: 20px 0;
+}
+
+.menu-list li a {
+  color: #FDFDFD;
+  font-size: 40px;
+  text-decoration: none;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+  text-align: left; 
+  width: 100%;
+  max-width: 300px;
+}
+
+.menu-list li a:hover {
+  color: #2086FF;
+}
+
+/* Style pour le bouton */
+.menu-footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-button {
   display: inline-block;
-  margin: 0 20px;
+  padding: 20px 40px;
+  background-color: #007bff;
+  color: #FDFDFD;
+  text-decoration: none;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.footer-menu li a {
-  color: #ffffff;
+.login-button:hover {
+  background-color: #0056b3;
 }
 
-.footer-menu li a:hover {
-  color: #1abc9c;
+
+
+
+
+
+
+
+
+
+
+.home-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Newsletter section */
+/* Superposition avec opacité */
+.home-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 35, 0.8); /* Couleur #232323 avec 70% d'opacité */
+  z-index: 0;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Place l'image en arrière-plan */
+}
+
+.hero-content {
+  position: relative;
+  color: #FDFDFD;
+  z-index: 1; /* Assure que le texte soit au-dessus de la superposition */
+}
+
+.home-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 150px;
+  color: #FDFDFD;
+  margin-bottom: -30px;
+}
+
+
+
+.home-title .highlight {
+  color: #007bff;
+}
+
+.home-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  color: #FDFDFD;
+  margin-bottom: 40px;
+}
+
+.home-description .highlight-blue {
+  color: #007bff;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+  .home-container {
+    height: 100vh;
+  }
+
+  .hero-image {
+    height: 100vh;
+  }
+
+  .home-title {
+    font-size: 36px;
+  }
+
+  .home-description {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+.content-section {
+  max-width: 800px; /* Limite la largeur */
+  margin: 0 auto; /* Centre la section */
+  text-align: left; /* Aligne le contenu à gauche */
+  padding: 20px;
+}
+
+.title-contenu {
+  font-size: 80px;
+  color: #FDFDFD;
+  margin-bottom: 20px;
+}
+
+.text-contenu {
+  font-size: 16px;
+  color: #FDFDFD;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+/* Style général du footer */
+footer {
+  background-color: #383838;
+  color: #FDFDFD;
+  padding: 20px 30px;
+  text-align: center;
+  margin-top: 10em;
+  font-size: clamp(12px, 1.2vw, 18px); /* Ajuste la taille du texte automatiquement */
+}
+
+/* Logo du footer */
+.footer-logo img {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+/* Section de la newsletter */
 .newsletter-section {
-  margin-top: 40px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  font-size: clamp(12px, 1.2vw, 18px); /* Ajuste la taille du texte automatiquement */
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .newsletter-section p {
@@ -202,55 +332,599 @@ footer {
 .newsletter-section form {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; 
 }
 
 .newsletter-section input[type="email"] {
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  width: 250px;
+  flex: 1;
+  min-width: 350px;
+  padding: 24px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  background-color: #666666;
+  color: #FDFDFD;
+  font-size: 22px;
+}
+
+.newsletter-section input[type="email"]::placeholder {
+  color: #C0C0C0;
 }
 
 .newsletter-section button {
-  padding: 10px 15px;
-  background-color: #1abc9c;
-  color: #ffffff;
+  width: 150px; 
+  padding: 20px;
+  background-color: #2086FF;
+  color: #FDFDFD;
   border: none;
-  border-radius: 3px;
-  margin-left: 10px;
+  border-radius: 8px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 30px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .newsletter-section button:hover {
-  background-color: #16a085;
+  background-color: #0056b3;
 }
 
-/* Footer bottom section */
+/* Bas du footer */
 .footer-bottom {
+  font-size: clamp(14px, 1vw, 16px); /* Utilisation de clamp pour rendre le texte responsive */
+  border-top: 1px solid #888;
+  padding-top: 10px;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centre le texte */
   align-items: center;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 15px;
 }
 
-.footer-left {
-  text-align: left;
-  margin-left: 50px;
-}
-
-.footer-right {
-  text-align: right;
-  margin-right: 50px;
-}
-
-/* Mentions légales et WordPress links */
 .footer-bottom a {
-  color: #1abc9c;
+  color: #2086FF;
+  text-decoration: none;
 }
 
 .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.rgpd {
+  font-size: clamp(16px, 1.5vw, 22px); /* Taille responsive */
+}
+
+
+
+
+
+
+
+
+
+
+/*PAGE LES EQUIPES*/
+/* Conteneur principal */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* Titre principal */
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+/* Sous-titre pour la description */
+.article-entry p {
+  font-size: 22px;
+  color: #FDFDFD;
+}
+
+/* Section des équipes */
+.equipes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Style de chaque équipe */
+.equipe {
+  background-color: #232323;
+  border-radius: 8px;
+  text-align: center;
+  color: #FDFDFD;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.equipe .title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 60px;
+}
+
+/* Ligne de séparation sous le titre */
+.separator {
+  width: 100%;
+  height: 2px;
+  background-color: #FDFDFD;
+  border: none;
+  margin: 0 auto 15px auto;
+  margin-bottom: 30px;
+}
+
+/* Images uniformes */
+.equipe img {
+  width: 100%;
+  height: 450px; /* Hauteur fixe pour uniformiser */
+  object-fit: cover; /* Recadre l'image pour qu'elle remplisse le conteneur sans déformation */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Noms des joueurs en bas de l'image */
+.etudiant ul {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FDFDFD;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Bouton de création/rejoindre une équipe */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-container a {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #2086FF;
+  color: #FDFDFD;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.button-container a:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+
+/*POUR LA PAGES MATCHS*/
+/* Conteneur principal */
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titre principal */
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-top: 100px;
+}
+
+/* Sous-titre pour la description */
+.article-entry p {
+  font-size: 22px;
+  color: #FDFDFD;
+  
+}
+
+/* Stage Title */
+.stage-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* Ligne de séparation sous le titre d'étape */
+.separator-line {
+  width: 100%;
+  height: 2px;
+  background-color: #FDFDFD;
+  border: none;
+  margin: 0 auto 15px auto;
+  margin-bottom: 30px;
+}
+
+/* Conteneur des cartes de match */
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Carte de chaque match */
+.match-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+/* Image de chaque match */
+.match-thumbnail img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Titre du match sur l'image */
+.match-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  color: #FDFDFD;
+  background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour meilleure lisibilité */
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+/*CONNEXION*/
+/* Formulaire de connexion et d'inscription */
+.login-container, .register-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+/* Titre principal */
+.article-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #FDFDFD;
+  margin-bottom: 60px;
+  text-align: left;
+  margin-top: 100px;
+
+}
+
+.login-container h2, .register-container h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+form p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #fff;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.terms {
+  font-size: 16px;
+  color: #ccc;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.terms a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+.login-link, .register-link {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 70px;
+  margin-bottom: -10px;
+
+  text-align: center;
+}
+
+.login-link a, .register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-link a:hover, .register-link a:hover {
+  text-decoration: underline;
+}
+
+.login-submit, .register-submit {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.login-submit:hover, .register-submit:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.success {
+  color: #4caf50;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CARDS POUR LE TOURNOI*/
+/* Style pour la carte du projet */
+.single-project-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  max-width: 800px;
+  margin: 20px auto;
+  min-height: 300px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bande bleue pour le titre et la date */
+.match-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 300px; /* Réduire la hauteur de la bande */
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.match-date {
+  font-size: 18px; /* Taille de la date */
+  text-align: right;
+}
+
+/* Corps de la carte du projet */
+.match-card-body {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style pour le logo et le nom de l'équipe */
+.team-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #222;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* Style pour le texte VS */
+.vs-text {
+  font-size: 100px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 0 20px;
+}
+
+/* Media Query pour mobile */
+@media (max-width: 600px) {
+  .single-project-card {
+    transform: scale(0.9);
+    margin: 10px;
+  }
+
+  .match-card-header {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .match-title {
+    font-size: 16px;
+  }
+
+  .match-date {
+    font-size: 14px;
+  }
+
+  .match-card-body {
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .team-logo, .default-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-name {
+    font-size: 14px;
+  }
+
+  .vs-text {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+/*INFO LéGALES*/
+/* Style pour la page Informations Légales */
+.legal-container {
+  max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+  margin: 0 auto;
+  padding: 20px;
+  color: #ffffff; /* Texte en blanc */
+  font-family: Arial, sans-serif;
+}
+
+/* Titre principal de la page */
+.legal-container h1.article-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+/* Titres des sections */
+.legal-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #007bff; /* Couleur bleue pour le titre */
+}
+
+/* Sous-titres des articles */
+.legal-section h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* Paragraphe de texte */
+.legal-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+/* Liste */
+.legal-section ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+/* Style pour les liens */
+.legal-section a {
+  color: #007bff; /* Couleur bleue pour les liens */
+  text-decoration: none;
+}
+
+.legal-section a:hover {
   text-decoration: underline;
 }
 
@@ -259,515 +933,89 @@ footer {
 
 
 
-/* Conteneur principal pour les cartes */
-.card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille responsive */
-  justify-items: center; /* Centre les cartes dans la grille */
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 10px;
-}
-
-/* Conteneur de chaque projet */
-.projet {
-  display: flex;
-  flex-direction: column; /* Empile l'image, le titre et le contenu verticalement */
-  justify-content: space-between; /* Équilibre les éléments */
-  width: 100%;
-  margin-bottom: 40px;
-  max-width: 320px; /* Fixe une largeur maximale uniforme pour les cartes */
-  background-color: #ffffff; /* Fond blanc pour la carte */
-  border-radius: 12px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  overflow: hidden; /* Cache les débordements */
-  transition: transform 0.3s ease; /* Transition fluide pour box-shadow et transform */
-  min-height: 500px; /* Fixe une hauteur minimale pour que toutes les cartes aient la même longueur */
-}
-
-/* Effet hover pour le projet */
-.projet:hover {
-  transform: translateY(-10px); /* Légère élévation au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Augmente légèrement l'ombre au survol */
-}
-
-/* Image du projet */
-.projet-thumbnail img {
-  width: 100%; /* Prend toute la largeur de la carte */
-  height: 200px; /* Hauteur fixe pour uniformiser les images */
-  object-fit: cover; /* Maintient le ratio de l'image sans distorsion */
-}
-
-/* Titre du projet */
-.projet-title {
-  font-size: 1.6em; /* Taille de la police pour le titre */
-  color: #333333; /* Couleur spécifique pour le titre */
-  text-align: center; /* Centre le titre */
-  margin-top: 10px; /* Réduit l'espacement entre l'image et le titre */
-  margin-bottom: 10px; /* Réduit l'espacement sous le titre */
-}
-
-/* Style pour les termes (type et couleur) */
-.projet-title span {
-  font-size: 0.9em; /* Taille plus petite pour les métadonnées */
-  color: #555555; /* Couleur plus discrète pour les termes */
-  display: block; /* Affiche les termes sur une nouvelle ligne */
-}
-
-/* Contenu du projet */
-.projet-content {
-  flex-grow: 1; /* Prend tout l'espace restant dans la carte */
-  padding: 15px; /* Espacement interne pour le contenu */
-  font-size: 1em; /* Taille de la police pour le contenu */
-  color: #555555; /* Couleur pour le texte */
-  line-height: 1.6; /* Améliore l'espacement entre les lignes */
-  overflow: hidden; /* Évite les débordements de texte */
-}
-
-/* Styles pour rendre la page responsive */
-@media (max-width: 768px) {
-  .projet {
-      max-width: 100%; /* Les cartes prennent toute la largeur sur mobile */
-  }
-
-  .projet-title {
-      font-size: 1.4em; /* Taille de police pour le titre sur mobile */
-  }
-
-  .projet-content {
-      font-size: 1em; /* Taille de police pour le contenu sur mobile */
-  }
-}
 
 
-
-
-
-
-.login-container {
-  max-width: 400px;
+/*UNE EQUIPE*/
+/* Style général de la page de l'équipe */
+.team-card {
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.login-container h2 {
-  text-align: center;
-}
-
-.login-container p {
-  margin-bottom: 15px;
-}
-
-.login-container label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.login-container input[type="text"],
-.login-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.login-container input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  background-color: #0073aa;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
 }
 
-.login-container input[type="submit"]:hover {
-  background-color: #005177;
-}
-
-/**/
-.login-logout-btn {
-  align-items: left;
-  margin-top: 15px; /* Ajuste l'espacement en fonction de la mise en page */
-}
-
-.login-button, 
-.logout-button {
-  display: inline-block;
-  padding: 10px 15px;
-  background-color: #0073aa; /* Couleur principale */
-  color: #fff;
-  text-decoration: none; /* Enlève le soulignement du lien */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-}
-
-.login-button:hover, 
-.logout-button:hover {
-  background-color: #005177; /* Couleur plus sombre au survol */
-}
-
-
-
-
-
-
-/* Conteneur principal de l'article */
-.single-project-card {
-  max-width: 800px; /* Limite la largeur de la carte */
-  margin: 20px auto; /* Centre la carte avec un espacement */
-  background-color: #ffffff; /* Fond blanc pour la carte */
-  border-radius: 12px; /* Coins arrondis */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  overflow: hidden; /* Cache les débordements */
-  transition: box-shadow 0.3s ease; /* Transition pour l'effet hover */
-
-}
-
-/* Effet hover pour l'article */
-.single-project-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
-}
-
-/* Image de la carte */
-.single-project-card img {
-  width: 100%; /* Prend toute la largeur de la carte */
-  height: auto; /* Hauteur automatique pour respecter le ratio */
-  max-height: 400px; /* Hauteur maximale pour l'image */
-  object-fit: cover; /* Garde le ratio d'origine de l'image */
-}
-
-/* Titre de l'article */
-.single-project-title {
-  font-size: 2em; /* Taille de la police pour le titre */
-  color: #333333; /* Couleur sombre pour le titre */
-  margin: 20px; /* Marge autour du titre */
-  text-align: center; /* Centre le titre */
-}
-
-/* Contenu de l'article */
-.single-project-description {
-  padding: 20px; /* Espacement interne pour le contenu */
-  font-size: 1.1em; /* Taille de la police pour le contenu */
-  color: #555555; /* Couleur pour le texte */
-  line-height: 1.6; /* Améliore l'espacement entre les lignes */
-}
-
-/* Lien de retour */
-.return-to-projects-link {
-  display: inline-block; /* Affichage en bloc pour la mise en forme */
-  padding: 10px 20px; /* Espacement interne */
-  background-color: #0073aa; /* Couleur de fond du bouton */
-  color: #ffffff; /* Couleur du texte */
-  border-radius: 5px; /* Coins arrondis */
-  text-decoration: none; /* Supprime le soulignement */
-  text-align: center; /* Centre le texte */
-  transition: background-color 0.3s ease; /* Transition pour le survol */
-  justify-content: center;
-}
-
-/* Effet hover pour le lien de retour */
-.return-to-projects-link:hover {
-  background-color: #005177; /* Couleur au survol */
-}
-
-/* Styles pour rendre la page responsive */
-@media (max-width: 768px) {
-  .single-project-title {
-      font-size: 1.6em; /* Taille de police pour le titre sur mobile */
-  }
-
-  .single-project-description {
-      font-size: 1em; /* Taille de police pour le contenu sur mobile */
-  }
-
-  .return-to-projects-link {
-      padding: 8px 15px; /* Ajuste l'espacement interne pour les mobiles */
-  }
-}
-
-
-
-
-
-
-
-
-/* Conteneur des équipes */
-.equipes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
-  flex-wrap: wrap;
-  justify-items: center; 
-  margin-top: 50px;
-  margin-bottom: 50px;
-
-}
-/* Style des cards individuelles */
-.equipe {
-  background-color: #ffffff; /* Fond blanc */
-  border-radius: 10px; /* Coins arrondis */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour la profondeur */
-  padding: 20px; /* Espacement interne */
-  margin-bottom: 40px;
-  width: 280px; /* Largeur fixe pour chaque card */
-  text-align: center; /* Centre le contenu dans chaque card */
-  transition: transform 0.3s ease; /* Transition pour l'effet hover */
-}
-
-/* Effet hover sur les cards */
-.equipe:hover {
-  transform: translateY(-10px); /* Légère élévation au survol */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
-}
-
-/* Style des noms des étudiants */
-.equipe .etudiant ul li {
-  font-size: 1em; /* Taille de la police pour les prénoms */
-  color: #34495e; /* Couleur des prénoms */
-  padding: 5px 0; /* Espacement interne des items */
-}
-
-/* Contenu de l'article */
-.etudiant {
-  padding: 20px; /* Espacement interne pour le contenu */
-  font-size: 1.1em; /* Taille de la police pour le contenu */
-  color: #555555; /* Couleur pour le texte */
-  line-height: 1.6; /* Améliore l'espacement entre les lignes */
-}
-
-/* Styles pour les listes d'étudiants et de projets */
-.etudiant ul {
-  list-style-type: none; /* Supprime les puces des listes */
-  padding: 0; /* Supprime le padding par défaut */
-}
-
-.etudiant li {
-  margin: 8px 0; /* Réduit l'espacement autour des éléments de la liste */
-  background-color: #e9ecef; /* Couleur de fond douce pour les items */
-  padding: 10px; /* Espacement interne des items */
-  border-radius: 5px; /* Coins arrondis pour les items */
-}
-
-/* Styles pour rendre la page responsive */
-@media (max-width: 768px) {
-  .title {
-      font-size: 1.6em; /* Taille de police pour le titre sur mobile */
-  }
-
-  .etudiant {
-      font-size: 1em; /* Taille de police pour le contenu sur mobile */
-  }
-}
-
-.title {
-  color: black;
-}
-
-
-
-
-
-
-/* Conteneur principal */
-.content-container {
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.article-entry {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: bold;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-
-
-
-
-
-
-/* Conteneur de la grille des projets */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colonnes */
-  gap: 35px; /* Réduction de l'espace entre les cartes */
-  margin: 20px 0;
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-/* Style de chaque carte de projet */
-.single-project-card {
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet hover fluide */
-  overflow: hidden; /* Cache le débordement */
-  text-align: center;
-}
-
-/* Style pour les images des projets */
-.project-thumbnail img {
-  width: 100%; /* Largeur égale pour toutes les images */
-  height: 250px; /* Hauteur fixe pour toutes les images */
-  border-radius: 10px 10px 0 0; /* Coins arrondis pour l'image en haut */
-}
-
-/* Style du titre des projets */
-.project-title {
-  font-size: 1.5em;
-  color: #333;
-  margin: 10px 0; /* Réduction de la marge */
-}
-
-/* Effet hover sur chaque carte de projet */
-.single-project-card:hover {
-  transform: translateY(-10px); /* Légère remontée au hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au hover */
-}
-
-/* Style pour la liste des équipes associées */
-.associated-team-list {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap; /* Pour que les boutons s'adaptent bien en cas de trop de contenu */
-}
-
-/* Style des boutons pour les équipes associées */
-.associated-team-card a {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #0073aa; /* Couleur de fond du bouton */
-  color: #ffffff; /* Couleur du texte */
-  border-radius: 5px; /* Coins arrondis pour le bouton */
-  text-decoration: none;
-  font-size: 0.9em;
-  transition: background-color 0.3s ease; /* Transition pour l'effet hover */
-}
-
-.associated-team-card a:hover {
-  background-color: #005177; /* Couleur plus sombre au hover */
-}
-
-
-/* Responsive : pour les écrans plus petits */
-@media (max-width: 1200px) {
-  .project-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur écran moyen */
-  }
-}
-
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur écran petit */
-  }
-}
-
-@media (max-width: 480px) {
-  .project-grid {
-    grid-template-columns: 1fr; /* 1 colonne sur mobile */
-  }
-}
-
-
-
-
-
-
-
-/* Conteneur principal de l'article */
-.team-card {
-  max-width: 800px; /* Limite la largeur de la carte */
-  margin: 20px auto; /* Centre la carte avec un espacement */
-  background-color: #ffffff; /* Fond blanc pour la carte */
-  border-radius: 12px; /* Coins arrondis */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  overflow: hidden; /* Cache les débordements */
-  transition: box-shadow 0.3s ease; /* Transition pour l'effet hover */
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-/* Effet hover pour l'article */
-.team-card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
-}
-
-/* Image de la carte */
-.team-card img {
-  width: 100%; /* Prend toute la largeur de la carte */
-  height: auto; /* Hauteur automatique pour respecter le ratio */
-  max-height: 400px; /* Hauteur maximale pour l'image */
-  object-fit: cover; /* Garde le ratio d'origine de l'image */
-}
-
-/* Titre de l'article */
+/* Titre de l'équipe */
 .team-card-title {
-  font-size: 2em; /* Taille de la police pour le titre */
-  color: #333333; /* Couleur sombre pour le titre */
-  margin: 20px; /* Marge autour du titre */
-  text-align: center; /* Centre le titre */
-  padding-top: 30px;
-  margin-bottom: 50px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: left;
+  color: #fdfdfd;
+  margin-bottom: 10px;
+  margin-top: 80px;
 }
 
-/* Liste des étudiants */
-.student-list ul {
-  list-style-type: none; /* Supprime les puces des listes */
-  padding: 0; /* Supprime le padding par défaut */
-  margin: 0 20px; /* Espacement autour de la liste */
-  margin-bottom: 50px;
+/* Séparation entre les sections */
+.section-separator {
+  border: none;
+  border-top: 2px solid #888;
+  margin: 20px 0;
 }
 
-/* Style des noms des étudiants */
-.student-list ul li {
-  font-size: 1.1em; /* Taille de la police */
-  color: #555555; /* Couleur pour le texte */
-  padding: 10px 0; /* Espacement interne des items */
-  border-bottom: 1px solid #e9e9e9; /* Ligne séparatrice entre les étudiants */
+/* Image de l'équipe avec dimensions fixes */
+.team-image img {
+  width: 100%;
+  max-width: 800px; /* Largeur maximale définie */
+  height: 400px; /* Hauteur définie pour uniformiser la taille */
+  object-fit: cover; /* Ajuste l'image sans déformation */
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-/* Titre des projets associés */
-.student-list h2 {
-  font-size: 1.5em; /* Taille de la police pour les projets associés */
-  color: #0073aa; /* Couleur du titre des projets */
-  margin: 20px 20px 10px; /* Espacement autour du titre */
-  text-align: left; /* Aligne à gauche */
+/* Titre des sections (Effectif, Détail) */
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  color: #fdfdfd;
 }
 
-/* Liste des projets associés */
-.student-list ul li a {
-  color: #0073aa; /* Couleur des liens */
-  text-decoration: none; /* Supprime le soulignement des liens */
-  transition: color 0.3s ease; /* Transition pour l'effet hover */
+/* Liste des joueurs */
+.student-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.student-list ul li a:hover {
-  color: #005177; /* Couleur plus sombre au survol */
+.student-card {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  text-align: center;
+  color: #fdfdfd;
 }
 
-/* Styles pour rendre la page responsive */
-@media (max-width: 768px) {
-  .team-card-title {
-    font-size: 1.6em; /* Taille de police pour le titre sur mobile */
-  }
-
-  .student-list ul li {
-    font-size: 1em; /* Taille de police pour le contenu sur mobile */
-  }
+.student-name {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+  color: #fdfdfd;
 }
+
+/* Section Détail */
+.team-details {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+
+
+
+
+
+

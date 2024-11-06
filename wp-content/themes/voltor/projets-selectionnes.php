@@ -1,81 +1,65 @@
 <?php get_header(); ?>
-
-<div class="main content-container"> <!-- Renommé 'content-page' en 'content-container' -->
-
-  <!-- Boucle WordPress standard pour récupérer le contenu de la page -->
-  <?php if (have_posts()) : ?>
-    <?php while (have_posts()) : the_post(); ?>
-      <div class="article-entry"> <!-- Renommé 'post-entry' en 'article-entry' -->
-        <?php the_post_thumbnail('large'); ?>
-        <h1 class="article-title"><?php the_title(); ?></h1> <!-- Renommé 'post-title' en 'article-title' -->
-        <div class="article-content"> <!-- Renommé 'post-content' en 'article-content' -->
-          <?php the_content(); ?>
-        </div>
-      </div>
-    <?php endwhile; ?>
-  <?php endif; ?>
-
+<section class="projet-list">
     <?php
-    // Créer une nouvelle requête pour récupérer les articles du type 'projet'
-    $args = array(
-        'post_type' => 'projet', // Type de publication personnalisé
-        'posts_per_page' => -1,   // Récupérer tous les projets
-    );
+    // Récupérer les projets
+    $projets = new WP_Query(array(
+        'post_type' => 'projet',
+        'posts_per_page' => -1,
+    ));
 
-    $projet = new WP_Query($args);
+    if ($projets->have_posts()) :
+        while ($projets->have_posts()) : $projets->the_post();
+            $titre_match = get_field('titre'); // Récupérer le titre du match
+            $date_match = get_field('date_et_heure'); // Récupérer la date et l'heure du match
+            $equipe1 = get_field('equipe_1'); 
+            $equipe2 = get_field('equipe_2');
+                        
+            if ($equipe1 && is_array($equipe1) && isset($equipe1[0]) && $equipe2 && is_array($equipe2) && isset($equipe2[0])) {
+                // Récupérer les IDs des équipes (en prenant le premier élément du tableau)
+                $equipe1_id = $equipe1[0]->ID;
+                $equipe2_id = $equipe2[0]->ID;
 
-    // Vérifiez si des projets sont trouvés
-    if ($projet->have_posts()) :
-        echo '<div class="project-grid">'; // Renommé 'project-listing' en 'project-grid'
-        while ($projet->have_posts()) : $projet->the_post();
+                $image_equipe1 = get_field('logo', $equipe1_id);
+                $image_equipe2 = get_field('logo', $equipe2_id);
+                            
 
-            // Affiche le projet
-            echo '<div class="single-project-card">'; // Renommé 'project-item' en 'single-project-card'
-            echo '<div class="project-thumbnail">'; // Renommé 'projet-thumbnail' en 'project-thumbnail'
-            the_post_thumbnail('medium'); // Afficher l'image du projet
-            echo '</div>';
-            echo '<h3 class="project-title">' . get_the_title() . '</h3>'; // Renommé 'projet-title' en 'project-title'
-
-            // Récupère les équipes associées via ACF
-            $associated_teams = get_posts(array(
-                'post_type' => 'equipe', // Remplace par le post type de tes équipes
-                'meta_query' => array(
-                    array(
-                        'key' => 'projet', // Nom du champ ACF dans les équipes
-                        'value' => '"' . get_the_ID() . '"', // Recherche l'ID du projet
-                        'compare' => 'LIKE'
-                    )
-                )
-            ));
-
-            if ($associated_teams) :
-                echo '<div class="associated-team-list">'; // Renommé 'team-listing' en 'associated-team-list'
-                foreach ($associated_teams as $post) {
-                    setup_postdata($post);
-                    ?>
-                    <div class="associated-team-card"> <!-- Renommé 'team-card' en 'associated-team-card' -->
-                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                $nom_equipe1 = $equipe1[0]->post_title;
+                $nom_equipe2 = $equipe2[0]->post_title;
+                ?>
+                <div class="single-project-card">
+                    <div class="match-card-header">
+                        <span class="match-date"><?php echo esc_html($date_match); ?>H</span>
                     </div>
-                    <?php
-                }
-                wp_reset_postdata(); // Réinitialiser les données
-                echo '</div>'; // Ferme la liste des équipes
-            else :
-                echo '<p>Aucune équipe n\'a sélectionné ce projet.</p>';
-            endif;
+                    <div class="match-card-body">
+                        <div class="team team-1">
+                            <div class="team-logo">
+                                <?php if ($image_equipe1) : ?>
+                                    <img src="<?php echo esc_url($image_equipe1['url']); ?>" alt="<?php echo esc_attr($nom_equipe1); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <p class="team-name"><?php echo $nom_equipe1; ?></p>
+                        </div>
 
-            echo '</div>';
+                        <p class="vs-text">VS</p>
 
+                        <div class="team team-2">
+                            <div class="team-logo">
+                                <?php if ($image_equipe2) : ?>
+                                    <img src="<?php echo esc_url($image_equipe2['url']); ?>" alt="<?php echo esc_attr($nom_equipe2); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <p class="team-name"><?php echo $nom_equipe2; ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php
+            }
         endwhile;
-        echo '</div>';
-
         wp_reset_postdata();
-
     else :
         echo '<p>Aucun projet trouvé.</p>';
     endif;
     ?>
-  </div>
-</div>
+</section>
 
 <?php get_footer(); ?>

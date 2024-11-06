@@ -1,11 +1,9 @@
 <?php
-add_theme_support( 'post-thumbnails' );
-
-  function register_my_menu(){
-    register_nav_menus( array(
-        'header-menu' => __( 'Menu De Tete'),
-        'footer-menu'  => __( 'Menu De Pied'),
-    ) );
+function register_my_menus() {
+  register_nav_menus(array(
+      'menu_principal' => __('Menu Principal')
+  ));
 }
-add_action( 'init', 'register_my_menu', 0 );
+
+add_action('init', 'register_my_menus');
 ?>
